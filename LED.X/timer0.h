@@ -10,7 +10,7 @@
 
 #include<xc.h>
 
-#define FOUR_MSEC_COUNT 125;
+#define FOUR_MSEC_COUNT 125;// 4 ms count
 
 void myTimerInit(void);
 
