@@ -10,7 +10,7 @@
 #pragma config FOSC = HS1       // Oscillator (HS oscillator (Medium power, 4 MHz - 16 MHz))
 // CONFIG2H
 #pragma config WDTEN = OFF      // Watchdog Timer (WDT disabled in hardware; SWDTEN bit disabled) 
-
+#define _XTAL_FREQ 8000000
 void main()
 {
     TRISD = 0;
@@ -19,6 +19,8 @@ void main()
     while (1)
     {
         LATD = 1;
-
+        __delay_ms(1000);
+        LATD = 0;
+        __delay_ms(1000);
     }
 }
