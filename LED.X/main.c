@@ -20,10 +20,6 @@ void main()
     while (1)
     {
         LATD = 1;
-        __delay_ms(1000);
-        LATD = 0;
-        __delay_ms(1000);
-        LATD = 1;
         __delay_ms(500);
         LATD = 0;
         __delay_ms(500);
