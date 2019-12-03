@@ -11,6 +11,7 @@
 // CONFIG2H
 #pragma config WDTEN = OFF      // Watchdog Timer (WDT disabled in hardware; SWDTEN bit disabled) 
 #define _XTAL_FREQ 8000000
+
 void main()
 {
     TRISD = 0;
@@ -22,5 +23,9 @@ void main()
         __delay_ms(1000);
         LATD = 0;
         __delay_ms(1000);
+        LATD = 1;
+        __delay_ms(500);
+        LATD = 0;
+        __delay_ms(500);
     }
 }
